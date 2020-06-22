@@ -1,5 +1,6 @@
 # IB智慧公交管理系统
 该项目是本人在大二实训时进行的入门训练，基于java中的SSM框架对数据库进行简单的增删改查的操作。
+讲解视频传送至B站：<https://www.bilibili.com/video/BV1UA411v7Ao/>
 
 # 开发环境
 IDE： Eclipse
