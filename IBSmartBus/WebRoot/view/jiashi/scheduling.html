@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>IB智慧公交-控制台</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Mannatthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+        <!-- jvectormap -->
+        <link href="../assets/plugins/jvectormap/jquery-jvectormap-2.0.2.css" rel="stylesheet">
+
+        <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="../assets/css/style.css" rel="stylesheet" type="text/css">
+        
+        <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.min.css" rel="stylesheet">
+    </head>
+
+
+    <body class="fixed-left">
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+                    <i class="ion-close"></i>
+                </button>
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="index.html" class="logo"><i class="mdi mdi-bus"></i>IB智慧公交</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-inner slimscrollleft">
+
+                    <div id="sidebar-menu">
+                        <ul>
+
+                            <li>
+                                <a href="index.html" class="waves-effect"><i class="mdi mdi-book-open-page-variant"></i><span>首页</span></a>
+                            </li>
+                            <li>
+                                <a href="scheduling.html" class="waves-effect"><i class="mdi mdi-av-timer"></i><span>查看排班</span></a>
+                            </li>   
+                            <li>
+                                <a href="system_information.html" class="waves-effect"><i class="mdi mdi-cloud"></i><span>系统基础信息</span></a>
+                            </li>                           
+                            <li>
+                                <a href="calendar.html" class="waves-effect"><i class="mdi mdi-account-circle"></i><span>修改个人资料</span></a>
+                            </li>   
+                            <li>
+                                <a href="setting.html" class="waves-effect"><i class="mdi mdi-settings"></i><span> 设置 </span></a>
+                            </li>  
+                            <li>
+                                <a href="../login.jsp" class="waves-effect"><i class="mdi mdi-power"></i><span> 退出 </span></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- Start right Content here -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+						
+                    <!-- Top Bar Start -->
+                    <div class="topbar">
+
+                        <nav class="navbar-custom">
+
+                            <ul class="list-inline float-right mb-0">
+                                <!-- language-->
+                                <li class="list-inline-item dropdown notification-list hide-phone">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect text-white" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="false" aria-expanded="false">
+                                        English <img src="../assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right language-switch">
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"/><span> Italian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"/><span> French </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"/><span> Spanish </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"/><span> Russian </span></a>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <i class="ti-email noti-icon"></i>
+                                        <span class="badge badge-danger noti-icon-badge">5</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5><span class="badge badge-danger float-right">745</span>Messages</h5>
+                                        </div>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
+                                            <p class="notify-details"><b>Charles M. Jones</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-3.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
+                                            <p class="notify-details"><b>Thomas J. Mimms</b><small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-4.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
+                                            <p class="notify-details"><b>Luis M. Konrad</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+
+                                        <!-- All-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            View All
+                                        </a>
+
+                                    </div>
+                                </li>
+
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <i class="ti-bell noti-icon"></i>
+                                        <span class="badge badge-success noti-icon-badge">23</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5><span class="badge badge-danger float-right">87</span>Notification</h5>
+                                        </div>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details"><b>Your order is placed</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-message"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-martini"></i></div>
+                                            <p class="notify-details"><b>Your item is shipped</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+
+                                        <!-- All-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            View All
+                                        </a>
+
+                                    </div>
+                                </li>
+
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <img src="../assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5>Welcome</h5>
+                                        </div>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5 text-muted"></i> My Wallet</a>
+                                        <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <ul class="list-inline menu-left mb-0">
+                                <li class="float-left">
+                                    <button class="button-menu-mobile open-left waves-light waves-effect">
+                                        <i class="mdi mdi-menu"></i>
+                                    </button>
+                                </li>
+                                <li class="hide-phone app-search">
+                                    <form role="search" class="">
+                                        <input type="text" placeholder="Search..." class="form-control">
+                                        <a href=""><i class="fa fa-search"></i></a>
+                                    </form>
+                                </li>
+                            </ul>
+
+                            <div class="clearfix"></div>
+
+                        </nav>
+
+                    </div>
+                    <!-- Top Bar End -->
+				
+                    <div class="page-content-wrapper ">
+
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="page-title-box">
+                                        <div class="btn-group float-right">
+                                            <ol class="breadcrumb hide-phone p-0 m-0">
+                                                <li class="breadcrumb-item"><a href="#">IB智慧公交</a></li>
+                                                <li class="breadcrumb-item active">控制台</li>
+                                            </ol>
+                                        </div>
+                                        <h4 class="page-title">控制台</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end page title end breadcrumb -->
+						<!-- On rows -->
+					  <button type="button" class="btn btn-warning" id="delete_user" data-toggle="modal" data-target="#myModal_query">查询排班</button>
+					  
+					  <!-- Modal 查询 -->
+					  <div class="modal fade" id="myModal_query" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">						        
+						        <h4 class="modal-title" id="myModalLabel">查询排班</h4>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						      </div>
+						      <div class="modal-body">
+						        <form id="query_form" method="POST" >
+									  <div class="form-group">
+									    <label for="exampleInputEmail1">排班ID</label>
+									    <input type="text" name="schedulingCode" class="form-control" id="exampleInputEmail1" placeholder="排班ID">
+									  </div>
+									  <div id="User_query_show" class="form-control">
+									  	
+									  </div>									  
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								        <button type="button" id="User_query" class="btn btn-primary">查询</button>
+								      </div>
+								</form>
+							   </div>
+						    </div>
+						  </div>
+						</div>
+					  <!-- Modal 删除 -->
+					  <div class="modal fade" id="myModal_delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">						        
+						        <h4 class="modal-title" id="myModalLabel">删除排班</h4>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						      </div>
+						      <div class="modal-body">
+						        <form id="delete_form" method="POST" >
+									  <div class="form-group">
+									    <label for="exampleInputEmail1">排班ID</label>
+									    <input type="text" name="schedulingCode" class="form-control" id="exampleInputEmail1" placeholder="排班ID">
+									  </div>									  
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								        <button type="submit" id="User_delete" class="btn btn-primary">删除</button>
+								      </div>
+								</form>
+							   </div>
+						    </div>
+						  </div>
+						</div>
+					  
+					  <!-- Modal 修改 -->
+					  <div class="modal fade" id="myModal_modify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">						        
+						        <h4 class="modal-title" id="myModalLabel">修改排班</h4>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						      </div>
+						      <div class="modal-body">
+						        <form id="modify_form" method="POST" >
+									  <div class="form-group">
+									    <label for="exampleInputEmail1">排班ID</label>
+									    <input type="text" name="schedulingCode" class="form-control" id="exampleInputEmail1" placeholder="排班ID">
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputEmail1">线路名</label>
+									    <select class="selectpicker form-control" name="lineCode"> 
+											<option value="1">线路一</option> 
+											<option value="2">线路二</option>
+											<option value="3">线路三</option>
+											<option value="4">线路四</option> 
+										</select> 
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">车牌号</label>
+									    <select class="selectpicker form-control" name="busLicense"> 
+											<option value="1">鄂E88888</option> 
+											<option value="2">鄂N12345</option>
+											<option value="3">桂E77889</option>
+											<option value="4">桂N45678</option> 
+											<option value="5">桂E46B54</option> 
+											<option value="6">桂N45678</option> 
+											<option value="7">桂7456A4</option> 
+											<option value="8">桂B11223</option> 
+										</select>
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">趟次</label>
+									    <input type="text" name="tcNumber" class="form-control" id="exampleInputPassword1" placeholder="趟次">
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">每趟时间</label>
+									    <input type="text" name="tcTime" class="form-control" id="exampleInputPassword1" placeholder="如：00:50">
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">司机编号</label>
+									    <select class="selectpicker form-control" name="userCode">
+											<option value="3">游安</option> 
+											<option value="5">丁世杰</option>
+											<option value="6">林晨</option>
+											<option value="7">熊伟仲</option> 
+										</select>
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">始发站</label>
+									    <select class="selectpicker form-control" name="startStation">
+											<option value="1">黄石港政府湖北师范大学</option> 
+											<option value="2">黄石市人民政府</option>
+											<option value="3">黄石市西塞山区人民政府</option>
+											<option value="4">万达广场(黄石店)</option> 
+											<option value="5">湖北师范大学文理学院(新校区)</option> 
+										</select>
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">终点站</label>
+									    <select class="selectpicker form-control" name="endStation">
+											<option value="1">黄石港政府湖北师范大学</option> 
+											<option value="2">黄石市人民政府</option>
+											<option value="3">黄石市西塞山区人民政府</option>
+											<option value="4">万达广场(黄石店)</option> 
+											<option value="5">湖北师范大学文理学院(新校区)</option> 
+										</select>
+									  </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								        <button type="submit" id="User_modify" class="btn btn-primary">修改</button>
+								      </div>
+								</form>
+							   </div>
+						    </div>
+						  </div>
+						</div>
+						
+					  	<!-- Modal 添加-->
+						<div class="modal fade" id="myModal_add" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">						        
+						        <h4 class="modal-title" id="myModalLabel">添加排班</h4>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						      </div>
+						      <div class="modal-body">
+						           <form id="add_form" method="POST" >
+									  <div class="form-group">
+									    <label for="exampleInputEmail1">线路名</label>
+									    <select class="selectpicker form-control" name="lineCode"> 
+											<option value="1">线路一</option> 
+											<option value="2">线路二</option>
+											<option value="3">线路三</option>
+											<option value="4">线路四</option> 
+										</select> 
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">车牌号</label>
+									    <select class="selectpicker form-control" name="busLicense"> 
+											<option value="1">鄂E88888</option> 
+											<option value="2">鄂N12345</option>
+											<option value="3">桂E77889</option>
+											<option value="4">桂N45678</option> 
+											<option value="5">桂E46B54</option> 
+											<option value="6">桂N45678</option> 
+											<option value="7">桂7456A4</option> 
+											<option value="8">桂B11223</option> 
+										</select>
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">趟次</label>
+									    <input type="text" name="tcNumber" class="form-control" id="exampleInputPassword1" placeholder="趟次">
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">每趟时间</label>
+									    <input type="text" name="tcTime" class="form-control" id="exampleInputPassword1" placeholder="如：00:50">
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">司机编号</label>
+									    <select class="selectpicker form-control" name="userCode">
+											<option value="3">游安</option> 
+											<option value="5">丁世杰</option>
+											<option value="6">林晨</option>
+											<option value="7">熊伟仲</option> 
+										</select>
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">始发站</label>
+									    <select class="selectpicker form-control" name="startStation">
+											<option value="1">黄石港政府湖北师范大学</option> 
+											<option value="2">黄石市人民政府</option>
+											<option value="3">黄石市西塞山区人民政府</option>
+											<option value="4">万达广场(黄石店)</option> 
+											<option value="5">湖北师范大学文理学院(新校区)</option> 
+										</select>
+									  </div>
+									  <div class="form-group">
+									    <label for="exampleInputPassword1">终点站</label>
+									    <select class="selectpicker form-control" name="endStation">
+											<option value="1">黄石港政府湖北师范大学</option> 
+											<option value="2">黄石市人民政府</option>
+											<option value="3">黄石市西塞山区人民政府</option>
+											<option value="4">万达广场(黄石店)</option> 
+											<option value="5">湖北师范大学文理学院(新校区)</option> 
+										</select>
+									  </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+								        <button type="submit" id="User_add" class="btn btn-primary">添加</button>
+								      </div>
+								</form>
+							   </div>
+						    </div>
+						  </div>
+						</div>
+					  <hr>
+					<table id="table" class="active bs-example"></table>
+					<!-- <table id="table_line_station_ref" class="active bs-example"></table> -->
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
+
+                <footer class="footer">
+                    Copyright 2020-06. All Rights Reserved & Power By 小小怪
+                </footer>
+
+            </div>
+            <!-- End Right content here -->
+
+        </div>
+        <!-- END wrapper -->
+		
+		<script src='../../static/js/three.min.js'></script>
+		<script src='../../static/js/kyorbk.js'></script>
+		<script src='../../static/js/perlin.js'></script>
+		<script src="../../static/js/script.js"></script>
+        <!-- jQuery  -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/popper.min.js"></script>
+        <script src="../assets/js/bootstrap.min.js"></script>
+        <script src="../assets/js/modernizr.min.js"></script>
+        <script src="../assets/js/detect.js"></script>
+        <script src="../assets/js/fastclick.js"></script>
+        <script src="../assets/js/jquery.slimscroll.js"></script>
+        <script src="../assets/js/jquery.blockUI.js"></script>
+        <script src="../assets/js/waves.js"></script>
+        <script src="../assets/js/jquery.nicescroll.js"></script>
+        <script src="../assets/js/jquery.scrollTo.min.js"></script>
+
+        <!--Morris Chart-->
+        <script src="../assets/plugins/flot-chart/jquery.flot.min.js"></script>
+        <script src="../assets/plugins/flot-chart/jquery.flot.time.js"></script>
+        <script src="../assets/plugins/flot-chart/curvedLines.js"></script>
+        <script src="../assets/plugins/flot-chart/jquery.flot.pie.js"></script>
+        <script src="../assets/plugins/morris/morris.min.js"></script>
+        <script src="../assets/plugins/raphael/raphael-min.js"></script>
+        <script src="../assets/plugins/jquery-sparkline/jquery.sparkline.min.js"></script>
+        
+        <script src="../assets/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="../assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+
+        <script src="../assets/pages/crypto-dash.init.js"></script>
+		
+		
+		<script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-table/1.16.0/bootstrap-table.js"></script> 
+        
+        
+        <!-- App js -->
+		<script src="../assets/js/app.js"></script>
+
+
+<!-- 四个操作 -->
+<script type="text/javascript">	
+/*添加 */
+$("#User_add").click(function() {
+    var str=$("#add_form").serialize();
+    console.log(str);
+    //提交表单
+    $.post({url:"../../scheduling/save.action",
+    //将form数据序列化，传递给后台，则将数据以roleName=xxx&&note=xxx传递
+     data:str, 
+     //成功后的方法
+     success:function(result) {
+    	 console.log(result);
+    	 //window.location.href="driving.html"; 
+    } 
+    }); 
+}); 
+
+/*修改 */ 
+$("#User_modify").click(function() { 
+    var str=$("#modify_form").serialize(); 
+    console.log(str);
+    //提交表单 
+    $.post({url:"../../scheduling/save.action", 
+    //将form数据序列化，传递给后台，则将数据以roleName=xxx&&note=xxx传递 
+     data:str, 
+     //成功后的方法 
+     success:function(result) { 
+    	 console.log(result);
+    	 //window.location.href="driving.html"; 
+    } 
+    });
+});
+ 
+/*查询*/ 
+$("#User_query").click(function() { 
+   var str=$("#query_form").serialize();
+   console.log(str);
+   //提交表单 
+    $.ajax({ 
+      url: "../../scheduling/findById.action",
+      type: "post",
+      data: str,
+      success: function(msg) {
+            console.log(msg); 
+			var html = "";    
+            html +="<span>ID:"+msg+"</span>";
+			document.getElementById("User_query_show").innerHTML = "<h6>ID : &nbsp;" + msg.schedulingCode + "</h6><br>"
+																  +"<h6>线路名 : &nbsp;" + "线路二" + "</h6><br>"
+																  +"<h6>车牌号 : &nbsp;" + msg.busLicense + "</h6><br>"
+																  +"<h6>趟次 : &nbsp;" + msg.tcNumber + "</h6><br>"
+																  +"<h6>每趟时间 : &nbsp;" + msg.tcTime + "</h6><br>"
+																  +"<h6>司机姓名 : &nbsp;" + "林晨" + "</h6><br>"
+																  +"<h6>始发站 : &nbsp;" + "黄石市人民政府" + "</h6><br>"
+																  +"<h6>终点站 : &nbsp;" + "黄石市西塞山区人民政府" + "</h6><br>";
+      }
+    });
+});
+
+/*删除*/
+$("#User_delete").click(function() {
+    var str=$("#delete_form").serialize();
+    //提交表单
+    $.post({url:"../../scheduling/delete.action",
+    //将form数据序列化，传递给后台，则将数据以roleName=xxx&&note=xxx传递
+     data:str, 
+     //成功后的方法
+     success:function(result) {
+    	 console.log(result);
+    }
+    });
+});
+
+</script>
+
+<!-- tables -->
+<script type="text/javascript">
+$('#table').bootstrapTable({
+    url: '../../scheduling/list.action', 
+    striped: true,                      //是否显示行间隔色
+    sortOrder: "asc",                   //排序方式
+    showRefresh: true,                 //是否显示刷新按钮
+    pageSize: 10,            // 页面默认每页显示数据条数
+    pageNumber: 1,          // 设置首页页码
+    pagination: true,       // 显示表格分页组件
+    columns: [{
+        field: 'schedulingCode',
+        title: 'ID'
+    },{
+        field: 'lineName',
+        title: '线路名'
+    }, {
+        field: 'busLicense',
+        title: '车牌号'
+    },  {
+        field: 'tcNumber',
+        title: '趟次'
+    }, {
+        field: 'tcTime',
+        title: '每趟时间'
+    }, {
+        field: 'name',
+        title: '司机编号'
+    }, {
+        field: 'startstation',
+        title: '始发站'
+    }, {
+        field: 'endstation',
+        title: '终点站'
+    }]
+});
+
+
+$('#table_line_station_ref').bootstrapTable({
+    url: '../line_station_ref/list.action', 
+    striped: true,          //是否显示行间隔色
+    sortOrder: "asc",       //排序方式
+    showRefresh: true,      //是否显示刷新按钮
+    columns: [{
+        field: 'id',
+        title: 'ID'
+    },{
+        field: 'lineCode',
+        title: '线路名'
+    }, {
+        field: 'stationCode',
+        title: '站点名'
+    }]
+});
+</script>
+
+</body>
+</html>

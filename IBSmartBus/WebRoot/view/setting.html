@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+        <title>Annex - Responsive Bootstrap 4 Admin Dashboard</title>
+        <meta content="Admin Dashboard" name="description" />
+        <meta content="Mannatthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+
+    <body class="fixed-left">
+
+        <!-- Loader -->
+        <div id="preloader"><div id="status"><div class="spinner"></div></div></div>
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left side-menu">
+                <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+                    <i class="ion-close"></i>
+                </button>
+
+                <!-- LOGO -->
+                <div class="topbar-left">
+                    <div class="text-center">
+                        <a href="index.html" class="logo"><i class="mdi mdi-assistant"></i> Annex</a>
+                        <!-- <a href="index.html" class="logo"><img src="assets/images/logo.png" height="24" alt="logo"></a> -->
+                    </div>
+                </div>
+
+                <div class="sidebar-inner slimscrollleft">
+
+                    <div id="sidebar-menu">
+                        <ul>
+
+                            
+
+                            <li>
+                                <a href="index.html" class="waves-effect"><i class="mdi mdi-book-open-page-variant"></i><span>首页</span></a>
+                            </li>
+                            <li>
+                                <a href="driving.html" class="waves-effect"><i class="mdi mdi-airballoon"></i><span>员工管理</span></a>
+                            </li>
+                            <li>
+                                <a href="bus.html" class="waves-effect"><i class="mdi mdi-bus"></i><span>车辆管理</span></a>
+                            </li>
+                            <li>
+                                <a href="station.html" class="waves-effect"><i class="mdi mdi-star-half"></i><span>站点管理</span></a>
+                            </li>
+                            <li>
+                                <a href="line.html" class="waves-effect"><i class="mdi mdi-cached"></i><span>线路管理</span></a>
+                            </li>
+                            <li>
+                                <a href="scheduling.html" class="waves-effect"><i class="mdi mdi-av-timer"></i><span>排班管理</span></a>
+                            </li>   
+                            <li>
+                                <a href="system_information.html" class="waves-effect"><i class="mdi mdi-cloud"></i><span>系统基础信息</span></a>
+                            </li>                           
+                            <li>
+                                <a href="calendar.html" class="waves-effect"><i class="mdi mdi-account-circle"></i><span>修改个人资料</span></a>
+                            </li>   
+                            <li>
+                                <a href="setting.html" class="waves-effect"><i class="mdi mdi-settings"></i><span> 设置 </span></a>
+                            </li>  
+                            <li>
+                                <a href="login.jsp" class="waves-effect"><i class="mdi mdi-power"></i><span> 退出 </span></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- Start right Content here -->
+
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+
+                    <!-- Top Bar Start -->
+                    <div class="topbar">
+
+                        <nav class="navbar-custom">
+
+                            <ul class="list-inline float-right mb-0">
+                                <!-- language-->
+                                <li class="list-inline-item dropdown notification-list hide-phone">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect text-white" data-toggle="dropdown" href="#" role="button"
+                                        aria-haspopup="false" aria-expanded="false">
+                                        English <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt=""/>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right language-switch">
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"/><span> Italian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"/><span> French </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"/><span> Spanish </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"/><span> Russian </span></a>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <i class="ti-email noti-icon"></i>
+                                        <span class="badge badge-danger noti-icon-badge">5</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5><span class="badge badge-danger float-right">745</span>Messages</h5>
+                                        </div>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
+                                            <p class="notify-details"><b>Charles M. Jones</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-3.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
+                                            <p class="notify-details"><b>Thomas J. Mimms</b><small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-4.jpg" alt="user-img" class="img-fluid rounded-circle" /> </div>
+                                            <p class="notify-details"><b>Luis M. Konrad</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+
+                                        <!-- All-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            View All
+                                        </a>
+
+                                    </div>
+                                </li>
+
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <i class="ti-bell noti-icon"></i>
+                                        <span class="badge badge-success noti-icon-badge">23</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5><span class="badge badge-danger float-right">87</span>Notification</h5>
+                                        </div>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details"><b>Your order is placed</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-message"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-martini"></i></div>
+                                            <p class="notify-details"><b>Your item is shipped</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+
+                                        <!-- All-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            View All
+                                        </a>
+
+                                    </div>
+                                </li>
+
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
+                                       aria-haspopup="false" aria-expanded="false">
+                                        <img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5>Welcome</h5>
+                                        </div>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5 text-muted"></i> My Wallet</a>
+                                        <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                            <ul class="list-inline menu-left mb-0">
+                                <li class="float-left">
+                                    <button class="button-menu-mobile open-left waves-light waves-effect">
+                                        <i class="mdi mdi-menu"></i>
+                                    </button>
+                                </li>
+                                <li class="hide-phone app-search">
+                                    <form role="search" class="">
+                                        <input type="text" placeholder="Search..." class="form-control">
+                                        <a href=""><i class="fa fa-search"></i></a>
+                                    </form>
+                                </li>
+                            </ul>
+
+                            <div class="clearfix"></div>
+
+                        </nav>
+
+                    </div>
+                    <!-- Top Bar End -->
+
+                    <div class="page-content-wrapper ">
+
+                        <div class="container-fluid">
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="page-title-box">
+                                        <div class="btn-group float-right">
+                                            <ol class="breadcrumb hide-phone p-0 m-0">
+                                                <li class="breadcrumb-item"><a href="#">Annex</a></li>
+                                                <li class="breadcrumb-item active">Settings</li>
+                                            </ol>
+                                        </div>
+                                        <h4 class="page-title">Settings</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end page title end breadcrumb -->
+                            <div class="row">
+                                <div class="col-md-4 col-xl-2">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">                                           
+                                            <div class=" text-center">                        
+                                                <img src="assets/images/users/avatar-1.jpg" alt="" class="rounded-circle img-thumbnail w-50">
+                                                <h4 class="font-16">Steven Meyers</h4>
+                                                <a href="" class="text-muted font-14">StevenMeyers@gmail.com</a>
+                                                <ul class="list-unstyled list-inline mb-0 mt-3">
+                                                    <li class="list-inline-item"><a href="#"><i class="ti-facebook text-primary"></i></a></li>                                                    
+                                                    <li class="list-inline-item"><a href="#"><i class="ti-linkedin text-danger"></i></a></li>
+                                                    <li class="list-inline-item"><a href="#"><i class="ti-twitter-alt text-info"></i></a></li>
+                                                </ul>
+                                                <a href="" class="btn btn-primary btn-sm mt-3">Update Profile</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 col-xl-5">
+                                    <div class="card bg-white m-b-30">
+                                        <div class="card-body">
+                                            <div class="general-label">
+                                                <form role="form">
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Full Name</label>
+                                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Full Name">
+                                                    </div>
+                                                    
+                                                    <div class="form-group">
+                                                        <label for="exampleInputEmail1">Email address</label>
+                                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleInputPassword1">Password</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                                                    </div>
+                                                    <button type="submit" class="btn btn-primary">Save Change</button>
+                                                </form>                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xl-5">
+                                    <div class="card bg-white m-b-30">
+                                        <div class="card-body">
+                                            <div class="general-label">
+                                                <form role="form">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Linked Account</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1">
+                                                            <option>PayPal</option>
+                                                            <option>VISA</option>
+                                                            <option>ICICI</option>
+                                                            <option>HDFC</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Collect Currency</label>
+                                                        <select class="form-control" id="exampleFormControlSelect2">
+                                                            <option>US Dollar</option>
+                                                            <option>Pounds</option>
+                                                            <option>Euro</option>
+                                                            <option>Yen</option>
+                                                        </select>
+                                                    </div>                                                   
+                                                    <div class="form-group">
+                                                        <label for="exampleInputPassword1">Change Wallet Password</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                                                    </div>                                                    
+                                                    <button type="submit" class="btn btn-primary">Save Change</button>
+                                                </form>                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-xl-4">
+                                    <div class="mini-stat clearfix bg-white">
+                                        <div class="row align-items-center">
+                                            <div class="col-2">
+                                                <span class="mini-stat-icon bg-light"><i class="mdi mdi-cellphone-iphone text-warning"></i></span>
+                                            </div>
+                                            <div class="col-10 text-left">
+                                                <h4 class="counter text-dark m-0 pb-1">SMS Auth</h4>
+                                                <h6>Used for withdrawals and security modifications</h6>
+                                                <div class="mt-3">
+                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-primary btn-sm active">
+                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Enable
+                                                        </label>
+                                                        
+                                                        <label class="btn btn-primary btn-sm">
+                                                            <input type="radio" name="options" id="option2" autocomplete="off"> Disable
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xl-4">
+                                    <div class="mini-stat clearfix bg-white">
+                                        <div class="row align-items-center">
+                                            <div class="col-2">
+                                                <span class="mini-stat-icon bg-light"><i class="mdi mdi-google-chrome text-warning"></i></span>
+                                            </div>
+                                            <div class="col-10 text-left">
+                                                <h4 class="counter text-dark m-0 pb-1">Google Auth</h4>
+                                                <h6>Used for withdrawals and security modifications</h6>
+                                                <div class="mt-3">
+                                                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                                        <label class="btn btn-primary btn-sm active">
+                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Enable
+                                                        </label>
+                                                        
+                                                        <label class="btn btn-primary btn-sm">
+                                                            <input type="radio" name="options" id="option2" autocomplete="off"> Disable
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-xl-4">
+                                    <div class="mini-stat clearfix bg-white">
+                                        <div class="row align-items-center">
+                                            <div class="col-2">
+                                                <span class="mini-stat-icon bg-light"><i class="mdi mdi-security text-warning"></i></span>
+                                            </div>
+                                            <div class="col-10 text-left">
+                                                <h4 class="counter text-dark m-0 pb-1">API</h4>
+                                                <h6>Create API private key can get you access to market.</h6>
+                                                <div class="mt-3">
+                                                    <a href="#" class="btn btn-primary btn-sm">API Setting</a>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- container -->
+
+                    </div> <!-- Page content Wrapper -->
+
+                </div> <!-- content -->
+
+                <footer class="footer">
+                    © 2018 Annex by Mannatthemes. 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a>
+                </footer>
+
+            </div>
+            <!-- End Right content here -->
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- jQuery  -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/modernizr.min.js"></script>
+        <script src="assets/js/detect.js"></script>
+        <script src="assets/js/fastclick.js"></script>
+        <script src="assets/js/jquery.slimscroll.js"></script>
+        <script src="assets/js/jquery.blockUI.js"></script>
+        <script src="assets/js/waves.js"></script>
+        <script src="assets/js/jquery.nicescroll.js"></script>
+        <script src="assets/js/jquery.scrollTo.min.js"></script>
+
+        <!-- App js -->
+        <script src="assets/js/app.js"></script>
+
+    </body>
+</html>

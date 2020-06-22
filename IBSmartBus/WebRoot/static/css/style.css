@@ -1,0 +1,10 @@
+body {
+  margin:0;
+  overflow:hidden;
+/*   background:#86D5C7; */
+}
+#artboard {
+	position:fixed;
+	right:-5%;
+	top:10%;
+}

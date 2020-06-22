@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.wuzesheng.org.dao.UserMapper">
+	
+	<!-- 登录 -->
+	<select id="loginUser" resultType="com.wuzesheng.org.domain.User">
+		SELECT 
+			userName,password,role,status 
+		FROM 
+			ibsmartbus.sysuser	
+		WHERE 
+			userName = #{UserName} 
+		AND 
+			password = #{PassWord}	
+	</select>
+	
+	<!-- 查询数据 -->
+	<select id="FindAl" resultType="com.wuzesheng.org.domain.User">
+		SELECT 
+			id,
+			userName,
+			password,
+			name,
+			phone,
+			idCard,
+			role,
+			driving,
+			status
+		from ibsmartbus.sysuser	
+	</select>
+	
+	<!-- 添加用户 -->
+	<insert id="Usersave" parameterType="com.wuzesheng.org.domain.User">
+		INSERT INTO ibsmartbus.sysuser	
+			( 
+				userName,
+				passWord,
+				name,
+				phone,
+				idCard,
+				role,
+				driving,
+				status
+			)
+			VALUES
+			( 
+				#{UserName}, 
+				#{PassWord}, 
+				#{Name}, 
+				#{phone},
+				#{IdCard},
+				#{Role},
+				#{Driving},
+				#{Status}
+			);
+	</insert>
+	
+	<!-- 删除 -->
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM ibsmartbus.sysuser 
+		WHERE id = #{ID}
+	</delete>
+	
+	<!-- 根据id修改数据 -->
+	<update id="update" parameterType="com.wuzesheng.org.domain.User">
+		UPDATE ibsmartbus.sysuser 
+			SET
+			userName = #{UserName} ,
+			passWord = #{PassWord} ,
+			name = #{Name} ,
+			phone = #{phone} ,
+			idCard = #{IdCard} ,
+			role = #{Role} ,
+			driving = #{Driving} ,
+			status = #{Status}
+		WHERE
+			id = #{ID}
+	</update>
+	
+		<!-- 根据id查询对象 -->
+	<select id="findById" parameterType="int" resultType="com.wuzesheng.org.domain.User">
+		SELECT 	id, 
+			userName,
+			passWord,
+			name,
+			phone,
+			idCard,
+			role,
+			driving,
+			status
+		FROM ibsmartbus.sysuser
+		WHERE id = #{ID}
+	</select>
+</mapper>

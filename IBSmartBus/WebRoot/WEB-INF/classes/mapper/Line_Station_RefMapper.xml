@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.wuzesheng.org.dao.Line_Station_RefMapper">
+
+	<!-- 查询数据 -->
+	<select id="FindAl" parameterType="map" resultType="map">	
+		select
+			lsf.id,
+			l.lineName,
+			s.stationName
+		from
+			ibsmartbus.station as s,
+			ibsmartbus.line as l ,
+			ibsmartbus.line_station_ref as lsf
+		where 
+			lsf.stationCode = s.stationCode
+		and
+			lsf.lineCode = l.lineCode
+	</select>	
+</mapper>

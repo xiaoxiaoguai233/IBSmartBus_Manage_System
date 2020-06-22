@@ -1,0 +1,159 @@
+/* ==============
+  Widgets
+===================*/
+.widget-chart li {
+  width: 31.5%;
+  display: inline-block;
+  padding: 0;
+
+  i {
+    font-size: 22px;
+  }
+}
+
+.mini-stat {
+  box-shadow: $shadow;
+  padding: 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 30px;
+}
+
+.mini-stat-icon {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  line-height: 60px;
+  text-align: center;
+  font-size: 30px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  float: left;
+  margin-right: 10px;
+}
+
+.mini-stat-info {
+  font-size: 14px;
+  padding-top: 2px;
+}
+
+.mini-stat-info span {
+  display: block;
+  font-size: 24px;
+}
+
+
+.round {
+  line-height: 60px;
+  color: $primary;
+  width: 60px;
+  height: 60px;
+  font-size: 26px;
+  display: inline-block;
+  font-weight: 400;
+  border: 3px solid lighten($primary,35%);
+  text-align: center;
+  border-radius: 50%;
+  background: lighten($primary,30%);
+}
+.round-inner,
+.text-lightdark{
+  color: $lightdark4;
+}
+
+.text-greylight{
+  color: $greylight;
+}
+
+.new-user table td img,
+.new-user ul li img {
+  margin-right: 8px;
+  width: 50px;
+}
+
+
+#boxscroll,
+#boxscroll2 {
+  height: 350px;
+  width: auto;
+  overflow: auto;
+}
+
+
+/*--FB-TWIT-Carousel--*/
+
+.vertical .carousel-item-next.carousel-item-left,
+.vertical .carousel-item-prev.carousel-item-right {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.vertical .carousel-item-next,
+.vertical .active.carousel-item-right {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100% 0);
+}
+
+.vertical .carousel-item-prev,
+.vertical .active.carousel-item-left {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+}
+.carousel-icon i {
+  font-size: 50px;
+  width: 80px;
+  height: 80px;
+  background-color: transparent;
+}
+#verticalCarousel,
+#verticalCarousel2 {
+  height: 165px;
+}
+
+/*---calculater---*/
+
+.calculator-block {
+  background-color:$light5;
+  background-image: url("../images/calcy.jpg");
+  background-size: cover;
+  background-position: center center;  
+  
+}
+.calculator-body {
+padding: 45px 25px 25px;
+position: relative;
+}
+
+.calculator-block .cryptonatorwidget select option{
+  background-color: $dark;
+}
+.calculator-block .cryptonatorwidget input, 
+.calculator-block .cryptonatorwidget select {
+  height: 40px !important;
+  line-height: 40px !important;
+  margin-bottom: 10px;
+  border: none;
+  color: $white;
+  border-bottom: 1px solid;
+  outline: none;
+  padding-left: 10px;
+  background-color: transparent;
+}
+.calculator-block .cryptonatorwidget {
+border: none !important;
+}
+.calculator-block .cryptonatorwidget div:last-child{
+  display: none;
+}
+/*---price wigets---*/
+.ccc-widget .histoTitle{
+  display: none;
+}
+.ccc-widget div:first-child{
+  border:none !important;
+}
+div.histoRow {
+  border-bottom-color: #dddddd !important;
+}

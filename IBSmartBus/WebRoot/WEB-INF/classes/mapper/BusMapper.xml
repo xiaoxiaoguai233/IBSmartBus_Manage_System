@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.wuzesheng.org.dao.BusMapper">
+	
+	<!-- 查询数据 -->
+	<select id="findAl" resultType="com.wuzesheng.org.domain.Bus">
+		SELECT 
+			busCode,
+			busLicense,
+			busType,
+			status,
+			startTime
+		from ibsmartbus.bus
+	</select>
+	
+	<!-- 添加 -->
+	<insert id="save" parameterType="com.wuzesheng.org.domain.Bus">
+		INSERT INTO ibsmartbus.bus	
+			(
+				busCode,
+				busLicense,
+				busType,
+				status,
+				startTime
+			)
+			VALUES
+			(
+				#{BusCode},
+				#{BusLicense}, 
+				#{BusType}, 
+				#{Status},
+				#{StartTime}
+			);
+	</insert>
+	
+	<!-- 删除 -->
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM ibsmartbus.bus 
+		WHERE busCode = #{BusCode}
+	</delete>
+	
+	<!-- 根据id修改数据 -->
+	<update id="update" parameterType="com.wuzesheng.org.domain.Bus">
+		UPDATE ibsmartbus.bus
+			SET
+			busLicense = #{BusLicense},
+			busType = #{BusType},
+			status = #{Status},
+			startTime = #{StartTime}
+		WHERE
+			busCode = #{BusCode}
+	</update>
+	
+	<!-- 根据id查询对象 -->
+	<select id="findById" parameterType="int" resultType="com.wuzesheng.org.domain.Bus">
+		SELECT
+			busCode,
+			busLicense,
+			busType,
+			status,
+			startTime
+		FROM ibsmartbus.bus
+		WHERE busCode = #{BusCode}
+	</select>
+</mapper>

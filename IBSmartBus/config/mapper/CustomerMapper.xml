@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.wuzesheng.org.dao.CustomerMapper">
+	<!-- 查询所有数据 -->
+	<select id="findAl" resultType="com.wuzesheng.org.domain.Customer">
+		SELECT 	id, 
+			name, 
+			gender, 
+			telephone, 
+			address
+			FROM
+		ibsmartbus.t_customer 
+	</select>
+	
+	<!-- 添加客户 -->
+	<insert id="save" parameterType="com.wuzesheng.org.domain.Customer">
+		INSERT INTO ibsmartbus.t_customer 
+			( 
+			name, 
+			gender, 
+			telephone, 
+			address
+			)
+			VALUES
+			( 
+			#{name}, 
+			#{gender}, 
+			#{telephone}, 
+			#{address}
+			)
+	</insert>
+	
+	<!-- 根据id查询对象 -->
+	<select id="findById" parameterType="int" resultType="com.wuzesheng.org.domain.Customer">
+		SELECT 	id, 
+			name, 
+			gender, 
+			telephone, 
+			address
+			FROM 
+		ibsmartbus.t_customer
+		    where id = #{value}
+	</select>
+	
+	<!-- 根据id修改数据 -->
+	<update id="update" parameterType="com.wuzesheng.org.domain.Customer">
+		UPDATE ibsmartbus.t_customer 
+			SET
+			name = #{name} , 
+			gender = #{gender} , 
+			telephone = #{telephone}, 
+			address = #{address}
+		WHERE
+			id = #{id}
+	</update>
+	
+	<!-- 删除 -->
+	<delete id="delete" parameterType="Integer[]">
+	DELETE FROM ibsmartbus.t_customer 
+		<where>
+			id
+			<foreach collection="array" item="id" open="in (" close=")" separator=",">
+				#{id}			
+			</foreach>
+		</where>
+	</delete>	
+</mapper>

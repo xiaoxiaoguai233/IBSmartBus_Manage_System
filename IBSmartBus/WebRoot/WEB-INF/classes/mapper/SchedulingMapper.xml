@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 该文件编写mybatis中的mapper接口里面的方法提供对应的sql语句 -->
+<mapper namespace="com.wuzesheng.org.dao.SchedulingMapper">
+	
+	<!-- 查询数据 -->
+	<select id="FindAl" parameterType="map" resultType="map">
+		SELECT
+			sd.schedulingCode,
+			li.lineName,
+			bs.busLicense,
+			sd.tcNumber,
+			sd.tcTime,
+			us.name,
+			sta.stationName as 'startstation',
+			stat.stationName as 'endstation'			
+		FROM 
+			ibsmartbus.scheduling as sd,
+			ibsmartbus.line as li,
+			ibsmartbus.bus as bs,
+			ibsmartbus.station as sta,
+			ibsmartbus.sysuser as us,
+			ibsmartbus.station as stat
+		WHERE
+				sd.lineCode = li.lineCode
+			AND
+				sd.busLicense = bs.busCode
+			AND
+				sd.userCode = us.id
+			AND
+				sd.startStation = sta.stationCode
+			AND
+				sd.endStation = stat.stationCode
+	</select>
+	
+	<!-- 添加用户 -->
+	<insert id="Schedulingsave" parameterType="com.wuzesheng.org.domain.Scheduling">
+		INSERT INTO ibsmartbus.scheduling
+			(
+				lineCode,
+				busLicense,
+				tcNumber,
+				tcTime,
+				userCode,
+				startStation,
+				endStation
+			)
+			VALUES
+			( 
+				#{lineCode}, 
+				#{busLicense}, 
+				#{tcNumber},
+				#{tcTime},
+				#{userCode},
+				#{startStation},
+				#{endStation}
+			);
+	</insert>
+	
+	<!-- 删除 -->
+	<delete id="delete" parameterType="Integer">
+		DELETE FROM ibsmartbus.scheduling 
+		WHERE schedulingCode = #{schedulingCode}
+	</delete>
+	
+	<!-- 根据id修改数据 -->
+	<update id="update" parameterType="com.wuzesheng.org.domain.Scheduling">
+		UPDATE ibsmartbus.scheduling 
+			SET
+				schedulingCode = #{schedulingCode} ,
+				busLicense = #{busLicense} ,
+				tcNumber = #{tcNumber} ,
+				tcTime = #{tcTime},
+				userCode = #{userCode} ,
+				startStation = #{startStation} ,
+				endStation = #{endStation}
+		WHERE
+			schedulingCode = #{schedulingCode}
+	</update>
+	
+	<!-- 根据id查询对象 -->
+	<select id="findById" parameterType="map" resultType="com.wuzesheng.org.domain.Scheduling">
+		SELECT 	 
+			sd.schedulingCode,
+			li.lineName as 'lineName',
+			bs.busLicense as 'busLicense',
+			sd.tcNumber,
+			sd.tcTime,
+			us.name as 'name',
+			sta.stationName as 'startstation',
+			stat.stationName as 'endstation'
+		FROM 
+			ibsmartbus.scheduling as sd,
+			ibsmartbus.line as li,
+			ibsmartbus.bus as bs,
+			ibsmartbus.station as sta,
+			ibsmartbus.sysuser as us,
+			ibsmartbus.station as stat
+		WHERE 
+				schedulingCode = #{schedulingCode}
+			AND			
+				sd.lineCode = li.lineCode
+			AND
+				sd.busLicense = bs.busCode
+			AND
+				sd.userCode = us.id
+			AND
+				sd.startStation = sta.stationCode
+			AND
+				sd.endStation = stat.stationCode
+	</select>
+</mapper>
